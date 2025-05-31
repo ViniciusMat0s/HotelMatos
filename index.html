@@ -21,9 +21,9 @@
 <body>
 
     <header>
-        <div class="container">
+        <div class="container-header">
             <div class="logo">
-                <a href="#Inicio"><img src="assets/images/logo.png" alt=""></a>
+                <a href="#inicio"><img src="assets/images/logo.png" alt=""></a>
             </div>
         </div>
         <div class="menu">
@@ -34,18 +34,20 @@
                     <div class="menu-mobile"></div>
                 </div>
                 <ul>
-                    <li class="active"><a href="#">Início</a></li>
-                    <li><a href="#">Acomodações</a></li>
+                    <li class="active"><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#acomodacoes">Acomodações</a></li>
                     <li><a href="#">Valores</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Localização</a></li>
+                    <li><a href="#contato">Contatos</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="banner">
-        <div class="container column">
+    <section class="banner" id="inicio">
+        <div class="container-column">
             <div class="banner-headline">
                 <h1>Sua melhor escolha no litoral gaúcho!</h1>
             </div>
@@ -70,7 +72,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="sobre" id="sobre">
         <div class="container-sobre">
             <div class="fotos">
                 <figure class="img1">
@@ -91,8 +93,57 @@
         </div>
     </section>
 
-    
+    <section class="acomodacoes" id="acomodacoes">
+        <h1>ACOMODAÇÕES</h1>
+        <div class="cards">
+            <div class="coluna-1">
+                <img src="assets/images/quarto-standard.jpg" alt="">
+                <img src="assets/images/quarto-2s.jpg" alt="">
+            </div>
+            <div class="coluna-2">
+                <img src="assets/images/quarto-master.jpg" alt="">
+            </div>
+            <div class="coluna-3">
+                <img src="assets/images/quarto-quadruplo.jpg" alt="">
+            </div>
+        </div>
+    </section>
 
+    <section id="contato" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato!</h2>
+        <form class="contatos-formulario" id="formulario" onsubmit="enviarMensagem(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar mensagem</button>
+        </form>
+    </section>
+
+    <section>
+        <div class="localizacao" id="localizacao">
+            <div class="localizacao-titulo">
+                <h1>Encontre-nos</h1>
+            </div>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d13856.626545319641!2d-50.01017006137355!3d-29.74417963486747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x9522820d34b542a7%3A0x8070b0cac33fdd76!2sApart%20Hotel%20Matos%20-%20Rua%20Andre%20Pusti%20(antiga%2C%20R.%20Andr%C3%A9%20Pusti%2C%20435%20-%20Zona%20Nova%2C%20Cap%C3%A3o%20da%20Canoa%20-%20RS%2C%2095555-000!3m2!1d-29.7451831!2d-50.0100559!5e0!3m2!1spt-BR!2sbr!4v1748686249283!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <img src="assets/images/logo.png" alt="">
+            <h1>© Todos os direitos reservados.</h1>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
