@@ -258,18 +258,21 @@ nav a:hover {
     height: 240px;
     flex-direction: column;
     padding-bottom: 16px;
+    object-fit: cover
 }
 
 .coluna-2 img {
     flex-wrap: wrap;
     width: 400px;
     height: 500px;
+    object-fit: cover;
 }
 
 .coluna-3 img {
     flex-wrap: wrap;
     width: 400px;
     height: 500px;
+    object-fit: cover;
 }
 
 .contatos {
@@ -433,18 +436,21 @@ nav a:hover {
         height: 192px;
         flex-direction: column;
         padding-bottom: 12px;
+        object-fit: cover;
     }
 
     .coluna-2 img {
         flex-wrap: wrap;
         width: 320px;
         height: 400px;
+        object-fit: cover;
     }
 
     .coluna-3 img {
         flex-wrap: wrap;
         width: 320px;
-        height: 400px;;
+        height: 400px;
+        object-fit: cover;
     }
 }
 
