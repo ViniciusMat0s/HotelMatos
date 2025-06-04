@@ -713,8 +713,9 @@ nav a:hover {
         height: auto;
     }
 
-    .logo {
-        padding-left: 20px;
+    .logo img {
+        width: 10rem;
+        height: auto;
     }
 
     .menuMobile {
