@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Matos</title>
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +51,7 @@
             <div class="banner-headline">
                 <h1>Sua melhor escolha no litoral gaúcho!</h1>
             </div>
-            <div class="banner-options">
+            <div class="banner-options scroll-animado">
                 <div class="banner1">
                     <div class="banner-card"><img src="assets/images/card-abertura.png" alt=""></div>
                     <div class="banner-desc">Abertos 24 H</div>
@@ -71,7 +72,7 @@
         </div>
     </section>
 
-    <section class="sobre" id="sobre">
+    <section class="sobre scroll-animado" id="sobre">
         <div class="container-sobre">
             <div class="fotos">
                 <figure class="img1">
@@ -92,23 +93,36 @@
         </div>
     </section>
 
-    <section class="acomodacoes" id="acomodacoes">
+    <section class="acomodacoes scroll-animado" id="acomodacoes">
         <h1>ACOMODAÇÕES</h1>
         <div class="cards">
             <div class="coluna-1">
-                <img src="assets/images/quarto-standard.jpg" alt="">
-                <img src="assets/images/quarto-2s.jpg" alt="">
+                <div class="img-container">
+                    <img src="assets/images/quarto-standard.jpg" alt="">
+                    <div class="hover-text">Quarto Standard Casal</div>
+                </div>
+                <div class="img-container">
+                    <img src="assets/images/quarto-2s.jpg" alt="">
+                    <div class="hover-text">Quarto Duplo Solteiros</div>
+                </div>
             </div>
             <div class="coluna-2">
-                <img src="assets/images/quarto-master.jpg" alt="">
+                <div class="img-container">
+                    <img src="assets/images/quarto-master.jpg" alt="">
+                    <div class="hover-text">Quarto Master Triplo</div>
+                </div>
             </div>
             <div class="coluna-3">
-                <img src="assets/images/quarto-quadruplo.jpg" alt="">
+                <div class="img-container">
+                    <img src="assets/images/quarto-quadruplo.jpg" alt="">
+                    <div class="hover-text">Quarto Quádruplo</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="contatos">
+
+    <section id="contato scroll-animado" class="contatos">
         <h2 class="contatos-titulo">Entre em contato!</h2>
         <form class="contatos-formulario" id="formulario" onsubmit="enviarMensagem(event)">
             <div class="grupo-form">
@@ -122,7 +136,7 @@
         </form>
     </section>
 
-    <section>
+    <section class="scroll-animado">
         <div class="localizacao" id="localizacao">
             <div class="localizacao-titulo">
                 <h1>Encontre-nos</h1>
@@ -135,7 +149,7 @@
             </div>
     </section>
 
-    <footer>
+    <footer class="scroll-animado">
         <div class="footer">
             <img src="assets/images/logo.png" alt="">
             <h1>© Todos os direitos reservados.</h1>

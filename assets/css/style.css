@@ -72,14 +72,19 @@ nav a {
     padding: 0.9375rem;
     /* 15px */
     text-decoration: none;
-    color: #000;
+    color: #098244;
     text-transform: uppercase;
+    transition: transform 0.3s;
 }
 
-nav .active a,
 nav a:hover {
+    transform: scale(1.07);
+}
+
+nav .active a {
     background-color: #098244;
-    color: #fff;
+    color: white;
+    border-radius: 10%;
 }
 
 .menuMobile {
@@ -133,11 +138,9 @@ nav a:hover {
 
 .banner-options {
     height: 9.375rem;
-    /* 150px */
     display: flex;
     justify-content: space-between;
     gap: 0.625rem;
-    /* 10px */
 }
 
 .banner1,
@@ -150,7 +153,17 @@ nav a:hover {
     padding: 1.25rem;
     border-radius: 10%;
     height: 12.5rem;
-    /* 200px */
+    transition: all .5s;
+    box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
+        -15px -15px 30px rgba(60, 60, 60, 0.082);
+    text-align: center;
+}
+
+.banner1:hover,
+.banner2:hover,
+.banner3:hover,
+.banner4:hover {
+    background: #04361c;
 }
 
 .banner-card {
@@ -242,6 +255,11 @@ nav a:hover {
     /* 300px */
     height: 18.75rem;
     box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.425);
+    transition: transform 0.3s;
+}
+
+.fotos figure img:hover {
+    transform: scale(1.07);
 }
 
 .img1 {
@@ -290,7 +308,6 @@ nav a:hover {
 
 .coluna-1 img {
     height: 15rem;
-    padding-bottom: 1rem;
 }
 
 .coluna-2 img,
@@ -424,6 +441,12 @@ nav a:hover {
         padding-left: 20px;
     }
 
+    nav .active a {
+        background-color: #098244;
+        color: white;
+        border-radius: 0;
+    }
+
     .menuMobile {
         display: flex;
         flex-direction: column;
@@ -542,6 +565,21 @@ nav a:hover {
         max-height: 25rem;
         object-fit: cover;
     }
+
+        .hover-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        opacity: 0;
+        z-index: 2;
+        transition: opacity 0.3s ease-in-out;
+        text-align: center;
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -556,6 +594,12 @@ nav a:hover {
         font-size: 2.5rem;
         text-align: center;
         max-width: 100%;
+    }
+
+    nav .active a {
+        background-color: #098244;
+        color: white;
+        border-radius: 0;
     }
 
     .banner-options {
@@ -626,15 +670,16 @@ nav a:hover {
     }
 
     .cards {
-        flex-direction: column;
+        flex-direction: row;
+        display: flex;
         align-items: center;
-        padding: 0 1rem;
+        justify-content: center;
     }
 
     .coluna-1,
     .coluna-2,
     .coluna-3 {
-        width: 100%;
+        width: 50%;
         max-width: 100%;
     }
 
@@ -648,6 +693,10 @@ nav a:hover {
 
     .coluna-1 {
         height: auto;
+    }
+
+    .hover-text {
+        opacity: 0;
     }
 
     .container-sobre .fotos {
@@ -722,5 +771,68 @@ nav a:hover {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+}
+
+.scroll-animado {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-animado.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 1024px) {
+
+    .img-container {
+        position: relative;
+        display: inline-block;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+    .img-container img {
+        display: block;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .img-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .hover-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        opacity: 0;
+        z-index: 2;
+        transition: opacity 0.3s ease-in-out;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .img-container:hover::before {
+        opacity: 1;
+    }
+
+    .img-container:hover .hover-text {
+        opacity: 1;
     }
 }

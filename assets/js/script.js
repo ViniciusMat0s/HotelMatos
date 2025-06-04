@@ -15,12 +15,26 @@ function enviarMensagem(event) {
     window.open(url, "_blank")
 }
 
-window.onload = function(){
-	document.querySelector(".menuMobile").addEventListener("click", function(){
-		if(document.querySelector(".menu nav ul").style.display == 'flex') {
-			document.querySelector(".menu nav ul").style.display = 'none';
-		} else {
-			document.querySelector(".menu nav ul").style.display = 'flex';
-		}
-	});
+window.onload = function () {
+    document.querySelector(".menuMobile").addEventListener("click", function () {
+        if (document.querySelector(".menu nav ul").style.display == 'flex') {
+            document.querySelector(".menu nav ul").style.display = 'none';
+        } else {
+            document.querySelector(".menu nav ul").style.display = 'flex';
+        }
+    });
 };
+
+const elementos = document.querySelectorAll('.scroll-animado');
+
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visivel');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+elementos.forEach(el => observador.observe(el));
